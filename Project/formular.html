@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Community Blog Post</title>
+    <link rel="stylesheet" href="../projectForm.css">
+    <script src="projectForm.js" async defer></script>
+    <link rel="shortcut icon" href="../pics/favicon1.png">
+</head>
+
+<body id="body">
+    <h1>Community Blog Post</h1>
+    <form name="Form" id="form">
+        <fieldset>
+            <legend>Ihre Daten</legend>
+            <div id="personal">
+                <label for="fName">Vorname</label>
+                <input id="fName" type="text" name="Vorname" placeholder="Ihr Vorname" required minlength="3" pattern="[a-z,A-Z, ,-]{3,25}">
+                <label for="lName">Nachname</label>
+                <input id="lName" type="text" name="Nachname" placeholder="Ihr Nachname" required minlength="3" pattern="[a-z,A-Z, ,-]{3,25}">
+                <label for="age">Alter</label>
+                <input id="age" type="number" name="Alter" min="10" placeholder="Ihr Alter" required >
+                <label for="mail">E-Mail</label>
+                <input id="mail" type="email" name="Email" size="30" maxlength="30" required placeholder="Ihre Email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Kategorie</legend>
+            <div>
+                <input id="asian" type="radio" name="essen" value="Asiatisch">
+                <label for="asian">Asiatisch</label>
+            
+                <input id="eu" type="radio" name="essen" value="Europäisch">
+                <label for="eu">Europäisch</label>
+         
+                <input id="af" type="radio" name="essen" value="Afrikanisch">
+                <label for="af">Afrikanisch</label>
+        
+                <input id="sa" type="radio" name="essen" value="Südamerikanisch">
+                <label for="sa">Südamerikanisch</label>
+           
+                <input id="na" type="radio" name="essen" value="Nordamerikanisch">
+                <label for="na">Nordamerikanisch</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Rezeptanleitung</legend>
+            <button type="submit">Hier können Sie ein Foto hochladen</button>
+            <label for="anleitung">Hier können Sie Ihre Anleitung zum Rezept hinzufügen.</label>
+            <textarea id="anleitung" name="Anleitung" required minlength="3" placeholder="Text für Rezept"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Schwierigkeit</legend>
+            <label for="volume">Schwierigkeitsgrad des Rezeptes:</label>
+            einfach <input type="range" id="volume" name="volume" min="0" max="10"> schwierig
+            <output id="output"></output>
+        </fieldset>
+        <fieldset>
+            <legend>Menüart</legend>
+            <div>
+                <label for="art">Wählen Sie die Menüart aus</label>
+                <input id="art" list="menu">
+            </div>
+            <datalist id="menu">
+                <option value="Frühstück">Frühstück</option>
+                <option value="Beilage"></option>
+                <option value="Hauptspeise"></option>
+                <option value="Dessert"></option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Ernährungsart</legend>
+            <label for="food">Wählen Sie Ihre Ernährungsart</label>
+            <select id="food">
+                <option value="vegan">Vegan</option>
+                <option value="vegetarisch">Vegetarisch</option>
+                <option value="pescetarisch">Pescetarisch</option>
+                <option value="flexitarisch">Flexitarisch</option>
+                <option value="Kanivoren">Kanivoren</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Passwort</legend>
+            <div>
+                <label for="password">Passwort</label>
+                <input id="password" type="password" name="Passwort" required>
+            </div>
+        </fieldset>
+        <input type="submit" id="submit">
+        <input type="reset" id="resetForm">
+    </form>
+</body>
+
+</html>
